@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        #name, #password, #mail, #phone{
+            border-radius: 7px;
+            background-color: rgb(206, 255, 239);
+        }
+        .button{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: aquamarine;">
+        <h1 align="center">Registration Form</h1>
+        <h4 align="center">For testing important form elements</h4>
+    </header>
+    <main>
+        <form action="/action_page.php" method="post" enctype="multipart/form-data" >
+
+            <label for="name">Username: </label>
+            <input type="text" name="name" id="name" required>
+            <br>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" required>
+            <br>
+            <label for="mail">E-mail: </label>
+            <input type="email" name="mail" id="mail" placeholder="something@company.domain" size="21px" required>
+            <br>
+            <label for="phone">Phone: </label>
+            <input type="tel" name="phone" id="phone" placeholder="+8801xxxxxxxxx" required>
+            <br>
+            <label for="bday">Birthdate: </label>
+            <input type="date" name="bday" id="bday" min="1990-01-01" required>
+            <br>
+            <label for="quantity">Quantity (1-20)</label> 
+            <input type="number" name="quantity" id="quantity" min="1" max="20" value="1" required>
+            <br>
+            <label for="title">Title:</label>
+            <input type="radio" name="title" value="mr" id="mr" required>
+            <label for="mr">Mr.</label>
+            <input type="radio" name="title" value="mrs" id="mrs">
+            <label for="mrs">Mrs.</label>
+            <input type="radio" name="title" value="phd" id="phd">
+            <label for="phd">PhD.</label>
+            <br>
+            <label for="payment">Payment: </label>
+            <select name="payment" id="payment" required>
+                <option value="Bkash">Bkash</option>
+                <option value="Nagad">Nagad</option>
+                <option value="COD">Cash on delivey</option>
+            </select>
+            <br>
+            <label for="comment">Comments:</label><br>
+            <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+            <br>
+            <label for="nid">Upload your NID:</label>
+            <input type="file" name="nid" id="nid" accept="image/png, image/jpg, image/jpeg">
+            <br>
+            <label for="terms">Agree to terms & conditions</label>
+            <input type="checkbox" name="terms" id="terms" value="Agreed" required><br>
+            <p align="center"><button type="reset" class="button" >Reset</button></p>
+            <p align="center"><button type="submit" class="button">Submit</button></p>
+            <!-- we can also use 
+                <input type="reset" align="center">
+                <input type="submit">
+            to insert these buttons-->
+        </form>
+    </main>
+    <footer style="background-color: aqua;">
+        <a href="index.html"> Back to home </a><br>
+        &copy;Copyright reserved 2024 <br>
+    </footer>
+</body>
+</html>
